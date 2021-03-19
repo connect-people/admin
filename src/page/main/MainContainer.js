@@ -84,7 +84,7 @@ function MainContainer({}) {
   // }, []);
 
     return (
-      <div ref={rootRef}>
+      <div ref={rootRef} style={{backgroundColor: 'springgreen'}}>
         {list.map((el, i) => {
             return (
               <Card className="box" key={i} ref={i == list.length - 1 && !payload.params.totalCount ? targetRef : null} ListData={list} item={el}/>

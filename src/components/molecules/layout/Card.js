@@ -21,7 +21,7 @@ const Card = ({ ListData, item }) => {
         fontSize: 12,
     }
 
-
+ 
     return(
         <div style={styles}>
             <span style={imageArea}></span>
