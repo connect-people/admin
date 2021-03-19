@@ -29,17 +29,19 @@ const Card = ({ ListData, item }) => {
  
     return(
         <div className={`${styles.unit_card}`}>
-            <div className={`${styles.container_thumb}`}>
-                <div className={`${styles.area_img}`}>
-                    <img src={`${list.imageUrl}`} className={`${styles.img_thumb}`}/>
-                    {/* <span className={`${styles.img_desc}`} style={imageArea}></span> */}
+            <a href="#none" className={`${styles.link_item}`}>
+                <div className={`${styles.container_thumb}`}>
+                    <div className={`${styles.area_img}`}>
+                        <img src={`${list.imageUrl}`} className={`${styles.img_thumb}`}/>
+                        {/* <span className={`${styles.img_desc}`} style={imageArea}></span> */}
+                    </div>
                 </div>
-            </div>
-            <div className={`${styles.info_desc}`}>
-                <span className={`${styles.txt_default} ${styles.tit_desc}`}>{list.brandName}</span>
-                <span className={`${styles.txt_default} ${styles.txt_desc}`}>{list.content}</span>
-                <span className={`${styles.txt_default} ${styles.txt_desc}`}>{list.majorCategoryName}</span>
-            </div>
+                <div className={`${styles.info_desc}`}>
+                    <span className={`${styles.txt_default} ${styles.tit_desc}`}>{list.brandName}</span>
+                    <span className={`${styles.txt_default} ${styles.txt_desc}`}>{list.content}</span>
+                    <span className={`${styles.txt_default} ${styles.txt_desc}`}>{list.majorCategoryName}</span>
+                </div>
+            </a>
         </div>  
     );
 }
