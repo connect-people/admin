@@ -13,8 +13,9 @@ const Card = ({ ListData, item }) => {
         display: 'block',
         width: '100px',
         height: '100px',
-        // background: `'url(${list.imageUrl})'`,
-        backgroundSize: '100px'
+        background: `url(${list.imageUrl})`,
+        backgroundSize: '100px',
+        backgroundPosition: 'center',
     }
     const fontStyle = {
         display: 'block',
