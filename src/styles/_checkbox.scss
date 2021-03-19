@@ -1,0 +1,150 @@
+.lab-check {
+  display: inline-block;
+  overflow: hidden;
+  position: relative;
+  min-width: 19px;
+  min-height: 19px;
+  margin: 0 $gutter $gutter 0;
+  vertical-align: top;
+
+  &:only-child {
+    margin: 0;
+  }
+
+  input {
+    @include hidden-input;
+
+    & + i {
+      display: inline-block;
+      position: relative;
+      width: 19px;
+      height: 19px;
+      border: 2px solid map-get($slate, fill);
+      background: $white;
+      vertical-align: top;
+    }
+  }
+
+  /* checkbox */
+  input[type='checkbox'] {
+    & + i {
+      border-radius: $borderRadius;
+    }
+
+    &:checked + i:after {
+      position: absolute;
+      top: 0;
+      bottom: 2px;
+      left: 0;
+      right: 0;
+      width: 3px;
+      height: 6px;
+      margin: auto;
+      border-width: 0 2px 2px 0;
+      border-style: solid;
+      border-color: map-get($slate, fill);
+      @include transform(rotate(45deg));
+      content: '';
+    }
+
+    &:disabled {
+      & + i {
+        @include palette($disabled);
+
+        &:after {
+          border-color: map-get($disabled, border);
+        }
+      }
+
+      & ~ .txt-check {
+        color: $muted;
+      }
+    }
+  }
+
+  /* radio */
+  input[type='radio'] {
+    & + i {
+      border-radius: 50%;
+    }
+
+    &:checked + i:after {
+      position: absolute;
+      top: 0;
+      bottom: 0;
+      left: 0;
+      right: 0;
+      width: 9px;
+      height: 9px;
+      margin: auto;
+      border-radius: 50%;
+      background: map-get($slate, fill);
+      content: '';
+    }
+
+    &:disabled {
+      & + i {
+        @include palette($disabled);
+
+        &:after {
+          background: map-get($disabled, border);
+        }
+      }
+
+      & ~ .txt-check {
+        color: $muted;
+      }
+    }
+  }
+
+  /* radio */
+  input[type='radio'] {
+    & + i {
+      border-radius: 50%;
+    }
+
+    &:checked + i:after {
+      position: absolute;
+      top: 0;
+      bottom: 0;
+      left: 0;
+      right: 0;
+      width: 9px;
+      height: 9px;
+      margin: auto;
+      border-radius: 50%;
+      background: map-get($slate, fill);
+      content: '';
+    }
+
+    &:disabled {
+      & + i {
+        @include palette($disabled);
+
+        &:after {
+          background: map-get($default, border);
+        }
+      }
+
+      & ~ .txt-check {
+        color: $muted;
+      }
+    }
+  }
+
+  .txt-check {
+    margin-left: $gutter / 2;
+  }
+}
+
+.check-group {
+  @include flexbox;
+  @include align-items(center);
+  @include flex-wrap(wrap);
+}
+
+.list-check {
+  li {
+    margin-bottom: $gutter;
+  }
+}

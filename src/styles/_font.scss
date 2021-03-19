@@ -1,0 +1,20 @@
+/* Nanum Gothic (Korean) */
+@font-face {
+  font-style: normal;
+  font-weight: $fontWeightRegular;
+  font-family: 'NanumGothic';
+  src: local('NanumGothic'), local('NanumGothicRegular'), local('NanumGothic-Regular'),
+    url('//d11u7cg79d1e8u.cloudfront.net/fonts/NanumGothic/NanumGothicRegular.woff2') format('woff2'),
+    url('//d11u7cg79d1e8u.cloudfront.net/fonts/NanumGothic/NanumGothicRegular.woff') format('woff'),
+    url('//d11u7cg79d1e8u.cloudfront.net/fonts/NanumGothic/NanumGothicRegular.otf') format('opentype');
+}
+
+@font-face {
+  font-style: normal;
+  font-weight: $fontWeightBold;
+  font-family: 'NanumGothic';
+  src: local('NanumGothicBold'), local('NanumGothic-Bold'),
+    url('//d11u7cg79d1e8u.cloudfront.net/fonts/NanumGothic/NanumGothicBold.woff2') format('woff2'),
+    url('//d11u7cg79d1e8u.cloudfront.net/fonts/NanumGothic/NanumGothicBold.woff') format('woff'),
+    url('//d11u7cg79d1e8u.cloudfront.net/fonts/NanumGothic/NanumGothicBold.otf') format('opentype');
+}

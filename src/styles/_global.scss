@@ -1,0 +1,8 @@
+/* global */
+.dash {
+  display: block;
+  width: 100%;
+  height: 1px;
+  margin-bottom: $gutter;
+  background: map-get($default, border);
+}

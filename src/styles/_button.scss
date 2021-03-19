@@ -1,0 +1,96 @@
+/* button */
+%btn-comm {
+  display: inline-block;
+  position: relative;
+  z-index: 1;
+  height: 35px;
+  padding: 7px 14px;
+  border-width: 1px;
+  border-style: solid;
+  border-radius: $borderRadius;
+  text-align: center;
+  white-space: nowrap;
+  vertical-align: top;
+  @include transition(all ease-in-out 0.15s);
+
+  &:focus {
+    z-index: 2;
+  }
+
+  &:hover {
+    @include box-shadow(0 0 0 35px rgba(0, 0, 0, 0.05) inset);
+  }
+
+  &[disabled] {
+    @include palette($disabled);
+    @include box-shadow(none);
+  }
+
+  [class*='-group'] > & {
+    margin-right: -1px;
+    border-radius: 0;
+
+    &:first-child {
+      border-top-left-radius: $borderRadius;
+      border-bottom-left-radius: $borderRadius;
+    }
+
+    &:last-child {
+      border-top-right-radius: $borderRadius;
+      border-bottom-right-radius: $borderRadius;
+      margin-right: 0;
+    }
+  }
+}
+
+.btn- {
+  &default {
+    @extend %btn-comm;
+    @include palette($default);
+  }
+
+  &red {
+    @extend %btn-comm;
+    @include palette($warning);
+  }
+
+  &teal {
+    @extend %btn-comm;
+    @include palette($teal);
+  }
+
+  &blue {
+    @extend %btn-comm;
+    @include palette($blue);
+  }
+
+  &green {
+    @extend %btn-comm;
+    @include palette($green);
+  }
+
+  &orange {
+    @extend %btn-comm;
+    @include palette($orange);
+  }
+
+  &brown {
+    @extend %btn-comm;
+    @include palette($brown);
+  }
+
+  &slate {
+    @extend %btn-comm;
+    @include palette($slate);
+  }
+}
+
+.btn-group {
+  @include flexbox(inline-flex);
+  @include flex-wrap(wrap);
+  vertical-align: top;
+
+  .tbl-comm & {
+    @include flex-wrap(nowrap);
+  }
+}

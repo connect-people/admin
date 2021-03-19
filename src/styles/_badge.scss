@@ -1,0 +1,46 @@
+/* badge */
+[class^='badge'] {
+  display: inline-block;
+  padding: 2px 7px;
+  border-radius: $borderRadius;
+  font-weight: $fontWeightBold;
+  font-size: 10px;
+  text-transform: uppercase;
+  white-space: nowrap;
+  vertical-align: top;
+}
+
+.badge- {
+  &default {
+    background: $muted;
+    color: $white;
+  }
+
+  &red {
+    @include palette($warning);
+  }
+
+  &teal {
+    @include palette($teal);
+  }
+
+  &blue {
+    @include palette($blue);
+  }
+
+  &green {
+    @include palette($green);
+  }
+
+  &orange {
+    @include palette($orange);
+  }
+
+  &brown {
+    @include palette($brown);
+  }
+
+  &slate {
+    @include palette($slate);
+  }
+}

@@ -1,5 +1,6 @@
 import React, { useState } from 'react';
 import {Route, BrowserRouter, Switch as Router } from "react-router-dom"
+import './styles/style.scss';
 import MainContainer from "./page/main/MainContainer"
 import Infinite from "./components/molecules/layout/Infinite"
 import ListView from "./components/molecules/layout/ListView"

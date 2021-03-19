@@ -1,5 +1,5 @@
 import React, {useEffect, useState} from 'react'
-import Card from './Card'
+import Card from './card/Card'
 
 const Infinite = ({posts, fetching, fetchMoreData}) => {
 

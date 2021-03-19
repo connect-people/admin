@@ -1,0 +1,207 @@
+/* input */
+input[type='email'],
+input[type='number'],
+input[type='password'],
+input[type='tel'],
+input[type='text'],
+select,
+textarea {
+  display: block;
+  width: 100%;
+  height: 35px;
+  min-height: 35px;
+  margin-bottom: $gutter;
+  padding: 7px 14px;
+  border: 1px solid map-get($default, border);
+  border-radius: $borderRadius;
+  background: $white;
+
+  &:focus {
+    border-color: #ccc;
+    outline: 0 none;
+  }
+
+  &::-webkit-input-placeholder {
+    color: $muted;
+    text-align: left;
+    @include opacity(1);
+  }
+
+  &::-moz-placeholder {
+    color: $muted;
+    text-align: left;
+    @include opacity(1);
+  }
+
+  &:-ms-input-placeholder {
+    color: $muted;
+    text-align: left;
+    @include opacity(1);
+  }
+
+  &::-ms-input-placeholder {
+    color: $muted;
+    text-align: left;
+    @include opacity(1);
+  }
+
+  &::placeholder {
+    color: $muted;
+    text-align: left;
+    @include opacity(1);
+  }
+
+  &[readonly] {
+    border-color: map-get($default, border);
+    background: map-get($default, fill);
+  }
+
+  &[disabled] {
+    @include palette($disabled);
+  }
+
+  &.error {
+    z-index: 2;
+    border-color: map-get($warning, fill);
+  }
+
+  .inp-group & {
+    @include flex(1, 0, 0%);
+    position: relative;
+    margin-bottom: 0;
+    margin-right: -1px;
+    border-radius: 0;
+    -webkit-appearance: none;
+
+    &:first-child {
+      border-top-left-radius: $borderRadius;
+      border-bottom-left-radius: $borderRadius;
+    }
+
+    &:last-child {
+      margin-right: 0;
+      border-top-right-radius: $borderRadius;
+      border-bottom-right-radius: $borderRadius;
+    }
+  }
+}
+
+input[type='number'] {
+  text-align: right;
+
+  &::-webkit-input-placeholder {
+    text-align: right;
+  }
+
+  &::-moz-placeholder {
+    text-align: right;
+  }
+
+  &:-ms-input-placeholder {
+    text-align: right;
+  }
+
+  &::-ms-input-placeholder {
+    text-align: right;
+  }
+
+  &::placeholder {
+    text-align: right;
+  }
+}
+
+select {
+  min-width: fit-content;
+  padding-right: 36px;
+  background-image: url('//image.thecupping.co.kr/admin/ico-select-arrow.svg');
+  background-repeat: no-repeat;
+  background-position: calc(100% - 14px) 50%;
+  -webkit-appearance: none;
+  appearance: none;
+
+  &[multiple] {
+    height: auto;
+    padding: 7px;
+    background-image: none;
+
+    option {
+      margin-bottom: 1px;
+      padding: 7px;
+      border-radius: $borderRadius;
+
+      &:last-child {
+        margin-bottom: 0;
+      }
+    }
+  }
+
+  [class*='tool'] & {
+    margin-bottom: 0;
+  }
+}
+
+textarea {
+  height: auto;
+}
+
+.inp-group {
+  @include flexbox;
+  @include align-items(stretch);
+  @include flex-wrap(wrap);
+  margin-bottom: $gutter;
+}
+
+.inp-group-feedback-right {
+  position: relative;
+
+  input[type='text'] {
+    z-index: 0;
+    margin-bottom: 0;
+    padding-right: 34px;
+    caret-color: transparent;
+  }
+
+  .feedback {
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    right: 0;
+    z-index: 1;
+    width: 35px;
+    height: 35px;
+    line-height: 35px;
+    pointer-events: none;
+  }
+}
+
+.txt-inp {
+  display: block;
+  @include flex(0, 0, auto);
+  height: 35px;
+  margin-right: -1px;
+  padding: 7px 14px;
+  border: 1px solid map-get($default, border);
+  background: map-get($default, fill);
+  text-align: center;
+  white-space: nowrap;
+
+  &:first-child {
+    border-top-left-radius: $borderRadius;
+    border-bottom-left-radius: $borderRadius;
+  }
+
+  &:last-child {
+    margin-right: 0;
+    border-top-right-radius: $borderRadius;
+    border-bottom-right-radius: $borderRadius;
+  }
+}
+
+.lab-comm {
+  display: inline-block;
+  margin-bottom: $gutter;
+  font-weight: $fontWeightRegular;
+  word-wrap: break-word;
+  word-break: break-all;
+  vertical-align: top;
+}

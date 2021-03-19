@@ -1,0 +1,69 @@
+/* pagination */
+.paging-comm {
+  @include flexbox;
+  @include justify-content(center);
+  @include flex-wrap(wrap);
+  margin-bottom: $gutter + 1;
+
+  li {
+    margin: 0 -1px -1px 0;
+
+    a,
+    .link-page {
+      display: block;
+      position: relative;
+      min-width: 35px;
+      padding: 7px;
+      border: 1px solid map-get($default, border);
+      font-weight: $fontWeightBold;
+      background: $white;
+      text-align: center;
+      outline: 0 none;
+
+      &:hover {
+        @include box-shadow(0 0 0 35px rgba(0, 0, 0, 0.05) inset);
+      }
+    }
+
+    &:first-child {
+      a,
+      .link-page {
+        border-top-left-radius: $borderRadius;
+        border-bottom-left-radius: $borderRadius;
+      }
+    }
+
+    &:last-child {
+      margin-right: 0;
+
+      a,
+      .link-page {
+        border-top-right-radius: $borderRadius;
+        border-bottom-right-radius: $borderRadius;
+      }
+    }
+  }
+
+  .active {
+    a,
+    .link-page {
+      z-index: 1;
+      @include palette($slate);
+      cursor: default;
+    }
+  }
+
+  .disabled {
+    a,
+    .link-page {
+      border-color: map-get($disabled, border);
+      background: map-get($disabled, fill);
+      color: map-get($disabled, border);
+      cursor: not-allowed;
+
+      &:hover {
+        @include box-shadow(none);
+      }
+    }
+  }
+}

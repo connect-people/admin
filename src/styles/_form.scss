@@ -1,0 +1,32 @@
+/* form */
+.head-form {
+  @include flexbox;
+  @include align-items(center);
+  @include flex-wrap(wrap);
+
+  .tit-form {
+    display: block;
+    @include flex(0, 1, auto);
+    margin: 0 $gutter $gutter 0;
+    font-weight: $fontWeightBold;
+    font-size: $htmlFontSize;
+  }
+
+  .tool-form {
+    @include flexbox;
+    @include flex-wrap(wrap);
+    @include flex(0, 0, auto);
+    max-width: 100%;
+    margin: 0 0 $gutter auto;
+  }
+}
+
+.body-form {
+  padding-top: $gutter;
+}
+
+.foot-form {
+  @include flexbox;
+  @include justify-content(center);
+  padding-bottom: $gutter;
+}

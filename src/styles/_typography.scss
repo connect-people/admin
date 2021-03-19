@@ -1,0 +1,60 @@
+.screen-out {
+  @include screen-out;
+}
+
+.txt- {
+  &desc {
+    margin-bottom: $gutter;
+  }
+
+  &center {
+    text-align: center !important;
+  }
+
+  &left {
+    text-align: left !important;
+  }
+
+  &right {
+    text-align: right !important;
+  }
+
+  &nowrap {
+    white-space: nowrap !important;
+  }
+
+  &muted {
+    font-weight: $fontWeightRegular;
+    color: $muted;
+  }
+
+  &red {
+    color: map-get($warning, fill);
+  }
+
+  &teal {
+    color: map-get($teal, fill);
+  }
+
+  &blue {
+    color: map-get($blue, fill);
+  }
+
+  &green {
+    color: map-get($green, fill);
+  }
+
+  &error {
+    display: block;
+    margin-top: -$gutter / 2;
+    margin-bottom: $gutter;
+    color: map-get($warning, fill);
+  }
+
+  &ncsry {
+    font-size: medium;
+    line-height: 1;
+    color: map-get($warning, fill);
+    vertical-align: top;
+  }
+}

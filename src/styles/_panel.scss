@@ -1,0 +1,69 @@
+/* panel */
+.panel-comm {
+  @include flexbox;
+  @include flex-direction(column);
+  margin-bottom: $gutter;
+  border: 1px solid map-get($default, border);
+  border-radius: $borderRadius;
+  background: $white;
+  @include box-shadow(0 1px 2px rgba($black, 0.05));
+
+  .panel-comm {
+    @include box-shadow(none);
+  }
+}
+
+.head-panel {
+  @include flexbox;
+  @include align-items(center);
+  @include flex-wrap(wrap);
+  position: relative;
+  padding: $gutter $gutter 0;
+  border-top: 1px solid map-get($default, border);
+
+  &:first-child {
+    border-top: 0 none;
+  }
+
+  .tit-panel {
+    display: block;
+    @include flex(0, 1, auto);
+    margin: 0 $gutter $gutter 0;
+    font-weight: $fontWeightBold;
+    font-size: $htmlFontSize;
+
+    & + select {
+      @include flex(0 1 0%);
+      margin-right: $gutter;
+    }
+  }
+
+  .tool-panel {
+    @include flexbox;
+    @include flex-wrap(wrap);
+    @include flex(0, 0, auto);
+    max-width: 100%;
+    margin: 0 0 $gutter auto;
+  }
+}
+
+.body-panel {
+  @include flex(1, 1, auto);
+  padding: $gutter $gutter 0;
+  border-top: 1px solid map-get($default, border);
+
+  &:first-child {
+    border-top: 0 none;
+  }
+}
+
+.foot-panel {
+  @include flexbox;
+  display: -ms-grid;
+  display: grid;
+  grid-column-gap: $gutter;
+  grid-auto-flow: column;
+  @include justify-content(center);
+  padding: $gutter;
+  border-top: 1px solid map-get($default, border);
+}

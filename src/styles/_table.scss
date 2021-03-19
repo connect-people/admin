@@ -1,0 +1,35 @@
+/* table */
+.tbl-comm {
+  overflow: auto;
+  margin-bottom: $gutter;
+
+  th,
+  td {
+    height: 35px;
+    padding: 7px 14px;
+    border: 1px solid map-get($default, border);
+    white-space: pre;
+  }
+
+  th {
+    background: map-get($default, fill);
+    text-align: left;
+  }
+
+  tbody td {
+    background: $white;
+    word-wrap: break-word;
+    word-break: break-all;
+  }
+
+  tbody tr:hover {
+    th,
+    td {
+      background: map-get($default, fill);
+    }
+  }
+
+  .fit {
+    padding: $gutter $gutter 0;
+  }
+}

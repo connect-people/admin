@@ -1,0 +1,175 @@
+@mixin animation($value) {
+  -webkit-animation: $value;
+  -moz-animation: $value;
+  -o-animation: $value;
+  animation: $value;
+}
+
+@mixin background-image($image, $repeat: no-repeat, $position: 50%, $size: cover) {
+  background-image: url(#{$url}/#{$image});
+  background-repeat: $repeat;
+  background-position: $position;
+  -webkit-background-size: $size;
+  background-size: $size;
+}
+
+@mixin box-shadow($value) {
+  -webkit-box-shadow: $value;
+  -moz-box-shadow: $value;
+  box-shadow: $value;
+}
+
+@mixin box-sizing($value: border-box) {
+  -webkit-box-sizing: $value;
+  -moz-box-sizing: $value;
+  box-sizing: $value;
+}
+
+@mixin clearfix() {
+  &:after {
+    display: block;
+    visibility: hidden;
+    height: 0;
+    font-size: 0;
+    line-height: 0;
+    clear: both;
+    content: '';
+  }
+}
+
+@mixin column($value) {
+  width: percentage(($value / 12));
+}
+
+@mixin container($value) {
+  max-width: $value;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+@mixin ellipsis($value: 1) {
+  @if $value == 1 {
+    display: block;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+  } @else {
+    display: block;
+    display: -webkit-box;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    -webkit-box-orient: vertical;
+    box-orient: vertical;
+    -webkit-line-clamp: $value;
+    line-clamp: $value;
+  }
+}
+
+@mixin gradation($from, $to, $direction: vertical) {
+  background-color: $from;
+  @if $direction == vertical {
+    background-image: -webkit-gradient(linear, left top, left bottom, from($from), to($to));
+    background-image: -moz-linear-gradient(top, $from, $to);
+    background-image: -o-linear-gradient(top, $from, $to);
+    background-image: linear-gradient(to bottom, $from, $to);
+  } @else if $direction == horizontal {
+    background-image: -webkit-linear-gradient(left, $from, $to);
+    background-image: -moz-linear-gradient(right, $from, $to);
+    background-image: -o-linear-gradient(right, $from, $to);
+    background-image: linear-gradient(to right, $from, $to);
+  } @else if $direction == diagonal {
+    background-image: -webkit-linear-gradient(left top, $from, $to);
+    background-image: -moz-linear-gradient(bottom right, $from, $to);
+    background-image: -o-linear-gradient(bottom right, $from, $to);
+    background-image: linear-gradient(to bottom right, $from, $to);
+  }
+}
+
+@mixin gutter($value) {
+  padding-left: ($value / 2);
+  padding-right: ($value / 2);
+}
+
+@mixin hidden-input() {
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  z-index: 1;
+  width: 100%;
+  height: 100%;
+  @include opacity(0.01);
+  cursor: pointer;
+}
+
+@mixin ir-caption() {
+  overflow: hidden;
+  width: 1px;
+  font-size: 1px;
+  line-height: 0;
+  text-indent: -9999px;
+}
+
+@mixin keyframes($name) {
+  @-webkit-keyframes #{$name} {
+    @content;
+  }
+  @-moz-keyframes #{$name} {
+    @content;
+  }
+  @-o-keyframes #{$name} {
+    @content;
+  }
+  @keyframes #{$name} {
+    @content;
+  }
+}
+
+@mixin opacity($value) {
+  opacity: $value;
+  filter: alpha(opacity=$value * 100);
+}
+
+@mixin palette($palette) {
+  border-color: map-get($palette, border);
+  background-color: map-get($palette, fill);
+  color: map-get($palette, color);
+}
+
+@mixin respond-to($breakpoint) {
+  @media only screen and (max-width: map-get($breakpoints, $breakpoint)) {
+    @content;
+  }
+}
+
+@mixin screen-out() {
+  overflow: hidden;
+  position: absolute;
+  width: 0;
+  height: 0;
+  line-height: 0;
+  text-indent: -9999px;
+}
+
+@mixin transform($value) {
+  -webkit-transform: $value;
+  -moz-transform: $value;
+  -ms-transform: $value;
+  transform: $value;
+}
+
+@mixin transition($value) {
+  -webkit-transition: $value;
+  -moz-transition: $value;
+  -o-transition: $value;
+  transition: $value;
+}
+
+@mixin user-select($value) {
+  -webkit-user-select: $value;
+  -khtml-user-select: $value;
+  -moz-user-select: $value;
+  -ms-user-select: $value;
+  user-select: $value;
+}

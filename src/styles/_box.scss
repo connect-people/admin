@@ -1,0 +1,7 @@
+.box-comm {
+  margin-bottom: $gutter;
+  padding: $gutter;
+  border: 1px solid map-get($default, border);
+  border-radius: $borderRadius;
+  background: map-get($default, fill);
+}

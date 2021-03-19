@@ -1,7 +1,7 @@
 import React, {useState, useEffect, useCallback, useRef} from 'react'
 import axios from 'axios'
 import PAGECONST from './utils/Constants';
-import Card from '../../components/molecules/layout/Card'
+import Card from '../../components/molecules/layout/card/Card'
 
 function MainContainer({}) { 
     const [paging, setPaging] = useState({})
@@ -84,7 +84,7 @@ function MainContainer({}) {
   // }, []);
 
     return (
-      <div ref={rootRef} style={{backgroundColor: 'springgreen'}}>
+      <div ref={rootRef}>
         {list.map((el, i) => {
             return (
               <Card className="box" key={i} ref={i == list.length - 1 && !payload.params.totalCount ? targetRef : null} ListData={list} item={el}/>
