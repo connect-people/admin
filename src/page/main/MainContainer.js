@@ -74,7 +74,7 @@ function MainContainer({}) {
 
 // options 설정
 const options = {
-  root: document.querySelector('.container'), // .container class를 가진 엘리먼트를 root로 설정. null일 경우 브라우저 viewport
+  root: null, // .container class를 가진 엘리먼트를 root로 설정. null일 경우 브라우저 viewport
   rootMargin: '10px', // rootMargin을 '10px 10px 10px 10px'로 설정
   threshold: [0, 0.5, 1] // 타겟 엘리먼트가 교차영역에 진입했을 때, 교차영역에 타켓 엘리먼트의 50%가 있을 때, 교차 영역에 타켓 엘리먼트의 100%가 있을 때 observe가 반응한다.
 }
