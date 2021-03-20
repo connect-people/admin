@@ -1,15 +1,17 @@
 import React, { useState } from 'react';
 import styles from '../layoutHeader/header.module.scss'
 
-const Header = ({}) => {
+const Header = ({history}) => {
 
-
+    const goBack = () => {
+        history.goBack();
+    };
     return(
         <header className={`${styles.head_cp} ${styles.head_notice}`}>
             <div id="headInfo" className={`${styles.head_info} ${styles.head_sub}`}>
-                <a href="#none" className="link_back">
+                <button type="button" className="link_back" onClick={goBack}>
                     <span className="ico_snippet ico_arr_b">뒤로가기</span>
-                </a> 
+                </button> 
                 <span className="sub_title sub_page">서비스 공지사항</span>
             </div>
         </header>
