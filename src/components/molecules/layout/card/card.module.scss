@@ -1,16 +1,25 @@
 
 @import 'src/styles/_utile.scss';
+
+.btn_more{
+    width: 100%;
+    text-align: center;
+    background-color: #fff;
+    padding: 20px 0;
+}
+
+
 .unit_card{
     float: left;
     width: 50%;
     padding: 12px;
     border-left: 1px solid #ddd;
     border-bottom: 1px solid #ddd;
+    background-color: #fff;
 }
 .link_item{
     display: block;
 }
-
 .container_thumb{
     width: 100%; 
     .area_img{
