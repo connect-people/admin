@@ -10,7 +10,7 @@ function App() {
         <Route exact path="/" component={MainContainer} />
         <Route path="/main" component={MainContainer} />
         <Route path="/notice/list" component={NoticeListContainer} />
-        <Route path="/notice/desc" component={NoticeDescContainer} />
+        <Route path="/notice/desc/:id" component={NoticeDescContainer} />
     </BrowserRouter>
   );
 }

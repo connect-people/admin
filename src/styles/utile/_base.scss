@@ -115,7 +115,7 @@ $disabled: (
   color: $muted,
 );
 
-$background: map-get($grey, 100);
+$background: $white;
 
 // shadows
 $shadows: none;

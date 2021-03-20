@@ -1,0 +1,20 @@
+
+@import 'src/styles/_utile.scss';
+
+.head_sub{
+    padding: 21px; 
+    line-height: 18px; 
+    font-size: 16px;
+    .sub_title{
+        line-height: 18px; 
+        font-size: 16px; 
+        width: 90%; 
+        white-space: nowrap; 
+        overflow: hidden; 
+        text-overflow: ellipsis;
+        &.sub_page{
+            display: block;
+            margin-left: 25px;
+        }
+    }
+}
