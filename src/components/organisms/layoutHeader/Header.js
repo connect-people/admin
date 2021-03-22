@@ -1,4 +1,4 @@
-import React, { useState } from 'react';
+import React from 'react';
 import styles from '../layoutHeader/header.module.scss'
 
 const Header = ({history}) => {

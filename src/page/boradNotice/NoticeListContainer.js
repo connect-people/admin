@@ -2,10 +2,10 @@ import React, { useState, useEffect } from 'react';
 import { Link } from 'react-router-dom';
 import axios from 'axios';
 import styles from './utils/notice.module.scss'
-import Header from '../../components/molecules/layout/layoutHeader/Header'
+import Header from '../../components/organisms/layoutHeader/Header'
 
 
-const NoticeListContainer = ({}) => {
+const NoticeListContainer = () => {
     const [list, setList] = useState([]);
     const [payload, setPayload] = useState({
         params: {

@@ -1,10 +1,10 @@
-import React, {useState, useEffect, useCallback, useRef} from 'react'
+import React, {useState, useEffect, useRef} from 'react'
 import axios from 'axios'
 import PAGECONST from './utils/Constants';
-import Card from '../../components/molecules/layout/card/Card';
+import Card from '../../components/molecules/card/Card';
 import styles from './utils/main.module.scss'
 
-function MainContainer({}) { 
+const MainContainer = () => { 
     const [paging, setPaging] = useState({})
     const [isLoading, setIsLoading] = useState(false)
     const [list, setList] = useState([])
@@ -30,7 +30,8 @@ function MainContainer({}) {
         })
         .then( response => {
          if(response){
-           const { result, data } = response.data
+           const { result } = response.data
+           console.log('data', response.data)
            if(result.code === 1){
               setIsLoading(true)
               const paging = response.data.paging;

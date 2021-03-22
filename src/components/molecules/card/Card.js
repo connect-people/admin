@@ -2,13 +2,13 @@ import React, { useState } from 'react';
 import styles from './card.module.scss'
 
 const Card = ({ ListData, item }) => {
-    const [list, setList] = useState(item);
-    const imageArea = {
-        background: `url(${list.imageUrl})`,
-        backgroundRepeat: 'no-repeat',
-        backgroundSize: '100% 100%',
-        backgroundPosition: 'center',
-    }
+    const [list] = useState(item);
+    // const imageArea = {
+    //     background: `url(${list.imageUrl})`,
+    //     backgroundRepeat: 'no-repeat',
+    //     backgroundSize: '100% 100%',
+    //     backgroundPosition: 'center',
+    // }
     return(
         <div className={`${styles.unit_card}`}>
             <a href="#none" className={`${styles.link_item}`}>
