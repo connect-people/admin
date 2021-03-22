@@ -1,12 +1,9 @@
 import React, { useState, useEffect } from 'react';
-import { Link } from 'react-router-dom';
 import axios from 'axios';
 import { API } from '../../library/API'
 import styles from './utils/notice.module.scss'
-import Header from '../../components/organisms/layoutHeader/Header'
 import Main from '../../components/organisms/layoutBody/Main'
 import RoundButton from '../../components/molecules/button/RoundButton'
-import TextArea from '../../components/molecules/input/TextArea'
 
 
 const NoticeWriteContainer = ({}) => {

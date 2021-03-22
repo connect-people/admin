@@ -7,7 +7,7 @@ import Header from '../../components/organisms/layoutHeader/Header'
 
 const NoticeListContainer = () => {
     const [list, setList] = useState([]);
-    const [payload, setPayload] = useState({
+    const [payload] = useState({
         params: {
             page:1
         }
