@@ -25,10 +25,11 @@ const NoticeWriteContainer = ({}) => {
 
 
     
-    const updateNotice = () => {
+    const updateNotice = (requestData) => {
         let key = '80CFeBE4MD6JmhEfClBx7zqo1eGvwTl5EZgKyMQc'
         axios.post("http://ec2-3-35-207-154.ap-northeast-2.compute.amazonaws.com/notice", {
           "x-api-key": key,
+          data: requestData
           })
           .then( response => {
             if(response){
