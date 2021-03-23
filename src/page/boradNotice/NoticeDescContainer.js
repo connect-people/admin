@@ -1,4 +1,5 @@
 import React, { useState, useEffect } from 'react';
+import { useHistory } from "react-router-dom";
 import axios from 'axios';
 import styles from './utils/notice.module.scss'
 import Header from '../../components/organisms/layoutHeader/Header'
@@ -12,10 +13,16 @@ const NoticeDescContainer = ({match}) => {
         params: {
             id: match.params.id
         }
-    })
+    }) 
+    
+    
+    let history = useHistory();
+    const goBack = () => {
+        history.goBack();
+    };
 
-    const getData = (match) => {
-        let key = '80CFeBE4MD6JmhEfClBx7zqo1eGvwTl5EZgKyMQc '
+    const getData = () => {
+        let key = '80CFeBE4MD6JmhEfClBx7zqo1eGvwTl5EZgKyMQc'
         axios.get(`http://ec2-3-35-207-154.ap-northeast-2.compute.amazonaws.com/notice/${noticeCode}`, {
           "x-api-key": key,
           })
@@ -23,7 +30,7 @@ const NoticeDescContainer = ({match}) => {
            if(response){
              const { data } = response
              if(response.status === 200){
-                 console.log('TEST',data)
+                 console.log('response',response)
                  const resData = response.data
                  setData(resData)
              }
@@ -37,7 +44,7 @@ const NoticeDescContainer = ({match}) => {
 
     return(
         <div id="cpWrap" className={`${styles.wrap_cp} ${styles.wrap_notice}`}>
-            <Header/>
+            <Header onClick={goBack}/>
             <Main id="cpContent" className={`${styles.section_notice}`}>
                 <div className={`${styles.tit_unit}`}>
                     <span className={`${styles.theme_info}`}>
