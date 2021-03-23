@@ -2,9 +2,12 @@ import React, { useState, useEffect } from 'react';
 import axios from 'axios';
 import styles from './utils/notice.module.scss'
 import Header from '../../components/organisms/layoutHeader/Header'
+import Main from '../../components/organisms/layoutBody/Main'
 
 const NoticeDescContainer = ({match}) => {
     const [data, setData] = useState([]);
+    const noticeCode = match.params.id
+    console.log('noticeCode',noticeCode)
     const payload = useState({
         params: {
             id: match.params.id
@@ -13,7 +16,7 @@ const NoticeDescContainer = ({match}) => {
 
     const getData = (match) => {
         let key = '80CFeBE4MD6JmhEfClBx7zqo1eGvwTl5EZgKyMQc '
-        axios.get(`http://ec2-3-35-207-154.ap-northeast-2.compute.amazonaws.com/notice/${payload.params.id}`, {
+        axios.get(`http://ec2-3-35-207-154.ap-northeast-2.compute.amazonaws.com/notice/${noticeCode}`, {
           "x-api-key": key,
           })
           .then( response => {
@@ -35,7 +38,7 @@ const NoticeDescContainer = ({match}) => {
     return(
         <div id="cpWrap" className={`${styles.wrap_cp} ${styles.wrap_notice}`}>
             <Header/>
-            <main id="cpContent" className={`${styles.section_notice}`}>
+            <Main id="cpContent" className={`${styles.section_notice}`}>
                 <div className={`${styles.tit_unit}`}>
                     <span className={`${styles.theme_info}`}>
                         <span className={`${styles.txt_tit}`}>{data.title}</span>
@@ -47,7 +50,7 @@ const NoticeDescContainer = ({match}) => {
                         <span className={`${styles.view_cont}`}>{data.content}</span>
                     </span>
                 </div>
-            </main>
+            </Main>
         </div>
     );
 

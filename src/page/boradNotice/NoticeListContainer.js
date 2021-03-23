@@ -14,9 +14,9 @@ const NoticeListContainer = () => {
     })
     
     const getData = () => {
-        let key = '80CFeBE4MD6JmhEfClBx7zqo1eGvwTl5EZgKyMQc '
-        axios.get("http://ec2-3-35-207-154.ap-northeast-2.compute.amazonaws.com/notice", {
-          "x-api-key": key,
+        let key = '80CFeBE4MD6JmhEfClBx7zqo1eGvwTl5EZgKyMQc'
+        axios.get('http://ec2-3-35-207-154.ap-northeast-2.compute.amazonaws.com/notice/', {
+          'x-api-key': key,
           params:{
           }
           })

@@ -6,11 +6,13 @@ import Main from '../../components/organisms/layoutBody/Main'
 import RoundButton from '../../components/molecules/button/RoundButton'
 
 
-const NoticeWriteContainer = ({}) => {
+const NoticeWriteContainer = ({ history }) => {
     const [data, setData] = useState({
             title: '',
             content: '',
-            member_id: 1
+            member_id: 1,
+            login_id:'cp',
+            member_name: 'cp'
     })
     const [payload, setPayload] = useState({
         params: {
@@ -18,25 +20,21 @@ const NoticeWriteContainer = ({}) => {
         }
     })
 
-
+    
     
     const updateNotice = (requestData) => {
         let key = '80CFeBE4MD6JmhEfClBx7zqo1eGvwTl5EZgKyMQc'
-        axios.post("http://ec2-3-35-207-154.ap-northeast-2.compute.amazonaws.com/notice",
-         {
-          headers: { 
-              'Access-Control-Allow-Origin': '*',
-              'Content-Type': 'application/json'
-            },
-          "x-api-key": key,
-          data: requestData
-          })
-          .then( response => {
+        const headers = {
+            'Access-Control-Allow-Origin': '*',
+            'Content-Type': 'application/json',
+            'x-api-key': key
+        }
+        axios.post('http://ec2-3-35-207-154.ap-northeast-2.compute.amazonaws.com/notice',        requestData, {headers: headers})
+        .then(function (response) {
             if(response){
-                const { data } = response.data
                 if(response.status === 200){
                    console.log('response',response)
-                //    history.push("/notice/list");
+                   history.push("/notice/list");
                 }
             }
         })
