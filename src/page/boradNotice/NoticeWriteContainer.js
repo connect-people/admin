@@ -10,9 +10,7 @@ const NoticeWriteContainer = ({}) => {
     const [data, setData] = useState({
             title: '',
             content: '',
-            login_id: '',
-            member_name: '',
-            created: ''
+            member_id: 1
     })
     const [payload, setPayload] = useState({
         params: {
@@ -24,7 +22,12 @@ const NoticeWriteContainer = ({}) => {
     
     const updateNotice = (requestData) => {
         let key = '80CFeBE4MD6JmhEfClBx7zqo1eGvwTl5EZgKyMQc'
-        axios.post("http://ec2-3-35-207-154.ap-northeast-2.compute.amazonaws.com/notice", {
+        axios.post("http://ec2-3-35-207-154.ap-northeast-2.compute.amazonaws.com/notice",
+         {
+          headers: { 
+              'Access-Control-Allow-Origin': '*',
+              'Content-Type': 'application/json'
+            },
           "x-api-key": key,
           data: requestData
           })
@@ -33,10 +36,11 @@ const NoticeWriteContainer = ({}) => {
                 const { data } = response.data
                 if(response.status === 200){
                    console.log('response',response)
+                //    history.push("/notice/list");
                 }
             }
         })
-        .catch(err => alert("글을 가져오는데 실패 했습니다."))
+        .catch(err => alert("오류"))
     }
 
 

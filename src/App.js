@@ -13,7 +13,7 @@ function App() {
         <Route path="/main" component={MainContainer} />
         <Route path="/notice/list" component={NoticeListContainer} />
         <Route path="/notice/desc/:id" component={NoticeDescContainer} />
-        <Route path="/notice/write" component={NoticeWriteContainer} />
+        <Route path="/notice/write/ZZzMbZjpPrg" component={NoticeWriteContainer} />
       </Router>
     </BrowserRouter>
   );
