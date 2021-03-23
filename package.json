@@ -14,20 +14,19 @@
     "mobx-react": "^7.1.0",
     "node-sass": "^5.0.0",
     "react": "^17.0.1",
-    "react-app-rewired": "^2.1.8",
+    "react-scripts": "4.0.3",
     "react-dom": "^17.0.1",
     "react-infinite-scroll-component": "^6.0.0",
     "react-infinite-scroll-hook": "^3.0.0",
     "react-mobx": "0.0.4",
     "react-router-dom": "^5.2.0",
-    "react-scripts": "4.0.3",
     "react-virtualized": "^9.22.3",
     "web-vitals": "^1.0.1"
   },
   "scripts": {
-    "start": "react-app-rewired start",
-    "build": "react-app-rewired build",
-    "test": "react-app-rewired test --env=jsdom",
+    "start": "react-scripts start",
+    "build": "react-scripts build",
+    "test": "react-scripts test --env=jsdom",
     "eject": "react-scripts eject"
   },
   "eslintConfig": {
