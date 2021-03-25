@@ -1,8 +1,8 @@
 import React, { useState } from 'react';
 import styles from './card.module.scss'
 
-const Card = ({ item }) => {
-    const [list, setList] = useState(item);
+const Card = ({ list }) => {
+    const [item, setItem] = useState(list);
     // const imageArea = {
     //     background: `url(${list.imageUrl})`,
     //     backgroundRepeat: 'no-repeat',
@@ -14,7 +14,7 @@ const Card = ({ item }) => {
             <a href="#none" className={`${styles.link_item}`}>
                 <div className={`${styles.container_thumb}`}>
                     <div className={`${styles.area_img}`}>
-                        <img src={`${list.imageUrl}`} className={`${styles.img_thumb}`} alt=""/>
+                        <img src={`${item.imageUrl}`} className={`${styles.img_thumb}`} alt=""/>
                         {/* <span className={`${styles.img_desc}`} style={imageArea}></span> */}
                     </div>
                 </div>
