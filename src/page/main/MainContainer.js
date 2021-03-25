@@ -39,7 +39,7 @@ const MainContainer = () => {
 
   return (
     <div className={page === 0 && loading ? "loading" : ""}>
-      <MainList list={list} />{console.log('%%%%%', list)}
+      <MainList list={list} />{console.log('%%%%%%%', list)}
       {/* {Math.ceil(payload.params.totalCount / payload.params.pageCount) > payload.params.page &&  */}
       <FetchMore loading={page !== 0 && loading} setPage={setPage} />
     </div>
