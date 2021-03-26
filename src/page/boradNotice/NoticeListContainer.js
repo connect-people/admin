@@ -20,7 +20,7 @@ const NoticeListContainer = () => {
           params:{
           }
           })
-          .then( response => {
+          .then( response => { 
            if(response){
              const { data } = response.data
              if(response.status === 200){

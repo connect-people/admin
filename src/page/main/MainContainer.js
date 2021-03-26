@@ -1,7 +1,5 @@
-import React, {useState, useEffect, useRef} from 'react'
-import axios from 'axios'
+import React, {useState, useEffect} from 'react'
 import PAGECONST from './utils/Constants';
-import Card from '../../components/molecules/card/Card';
 import styles from './utils/Main.module.scss'
 import MainList from './MainList';
 import { getData } from './utils/util';
@@ -14,7 +12,7 @@ const MainContainer = () => {
   const [payload, setPayload] = useState({
     params: {
         page: 1,
-        pageCount: 20,
+        pageCount: PAGECONST.count,
         totalCount: 0
     }
   })
@@ -41,7 +39,7 @@ const MainContainer = () => {
   }, [page]);
   return (
     <div id={styles.container} className={page === 0 && loading ? "loading" : ""}>
-      <MainList list={list} />{console.log('page', page)}
+      <MainList list={list} />
       <FetchMore loading={page !== 0 && loading} setPage={setPage}/>
     </div>
   );

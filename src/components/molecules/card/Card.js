@@ -1,8 +1,8 @@
 import React, { useState } from 'react';
-import styles from './card.module.scss'
+import styles from './Card.module.scss'
 
 const Card = ({ list }) => {
-    const [item, setItem] = useState(list);
+    const [item] = useState(list);
     // const imageArea = {
     //     background: `url(${list.imageUrl})`,
     //     backgroundRepeat: 'no-repeat',

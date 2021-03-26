@@ -15,7 +15,7 @@ const NoticeWriteContainer = ({ history }) => {
             member_name: 'cp'
     })
     const [payload, setPayload] = useState({
-        params: {
+        params: { 
             page:1
         }
     })

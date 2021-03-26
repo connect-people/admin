@@ -1,4 +1,4 @@
-import React, { useState, useEffect } from 'react';
+import React, { useState, useEffect, useCallback } from 'react';
 import { useHistory } from "react-router-dom";
 import axios from 'axios';
 import styles from './utils/notice.module.scss'
@@ -21,7 +21,7 @@ const NoticeDescContainer = ({match}) => {
         history.goBack();
     };
 
-    const getData = () => {
+    const getData = useCallback(() => {
         let key = '80CFeBE4MD6JmhEfClBx7zqo1eGvwTl5EZgKyMQc'
         axios.get(`http://ec2-3-35-207-154.ap-northeast-2.compute.amazonaws.com/notice/${noticeCode}`, {
           "x-api-key": key,
@@ -30,18 +30,18 @@ const NoticeDescContainer = ({match}) => {
            if(response){
              const { data } = response
              if(response.status === 200){
-                 console.log('response',response)
+                 console.log('response',data)
                  const resData = response.data
                  setData(resData)
              }
            }
         })
         .catch(err => alert("글을 가져오는데 실패 했습니다."))
-      }
+      }, [])
     useEffect(() => {
         getData();
-    },[payload])
-
+    },[getData])
+ 
     return(
         <div id="cpWrap" className={`${styles.wrap_cp} ${styles.wrap_notice}`}>
             <Header onClick={goBack}/>
