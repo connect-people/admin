@@ -35,7 +35,7 @@ const NoticeListContainer = () => {
     const boardListContent = () => {
         return list.map((item, idx) => {
             return (
-                <Link  key={idx} className={`${styles.link_unit} ${styles.notify}`} to={{ pathname: `/notice/desc/${item.id}`, state: list}}>
+                <Link key={idx} className={`${styles.link_unit} ${styles.notify}`} to={{ pathname: `/notice/desc/${item.id}`, state: list}}>
                     <span className={`${styles.theme_info}`}>
                         <span className={`${styles.cont_desc}`}>{item.title}</span>
                         <span className={`${styles.txt_date}`}>{item.created}</span>

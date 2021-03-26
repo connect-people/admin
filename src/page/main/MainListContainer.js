@@ -5,7 +5,7 @@ import MainList from './MainList';
 import { getData } from './utils/util';
 import FetchMore from '../../stores/FetchMore';
 
-const MainContainer = () => { 
+const MainListContainer = () => { 
   const [page, setPage] = useState(1);
   const [list, setList] = useState([]);
   const [loading, setLoading] = useState(false);
@@ -45,6 +45,6 @@ const MainContainer = () => {
   );
 }
 
-export default MainContainer;
+export default MainListContainer;
 
 

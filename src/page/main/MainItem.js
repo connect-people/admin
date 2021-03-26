@@ -8,7 +8,7 @@ const MainItem = ({ item }) => {
   }
   return(
     <li>
-      <Link className={styles.link_cont}>
+      <Link className={styles.link_cont} to={{ pathname: `/main/desc/${item.ID}`, state: item}}>
         <div className={styles.wrap_thumb}>
           <span className={styles.img_thumb} style={imageArea}></span>
         </div>
