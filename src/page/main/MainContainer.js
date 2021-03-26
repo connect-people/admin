@@ -2,13 +2,12 @@ import React, {useState, useEffect, useRef} from 'react'
 import axios from 'axios'
 import PAGECONST from './utils/Constants';
 import Card from '../../components/molecules/card/Card';
-import styles from './utils/main.module.scss'
+import styles from './utils/Main.module.scss'
 import MainList from './MainList';
 import { getData } from './utils/util';
 import FetchMore from '../../stores/FetchMore';
 
 const MainContainer = () => { 
-  const [data, setData] = useState({});
   const [page, setPage] = useState(1);
   const [list, setList] = useState([]);
   const [loading, setLoading] = useState(false);
@@ -19,7 +18,6 @@ const MainContainer = () => {
         totalCount: 0
     }
   })
-
   useEffect(async () => {
     setLoading(true);
     const list = await getData(page).then(response=>{
@@ -32,16 +30,17 @@ const MainContainer = () => {
       })
       return response.data.data;
     })
-    setList((prev) => [...prev, ...list]);
+   
+    if(Math.ceil(payload.params.totalCount / payload.params.pageCount) > payload.params.page){
+      setList((prev) => [...prev, ...list]);
+    }
+    
     setLoading(false);
   }, [page]);
-
-
   return (
-    <div className={page === 0 && loading ? "loading" : ""}>
-      <MainList list={list} />{console.log('%%%%%%%', list)}
-      {/* {Math.ceil(payload.params.totalCount / payload.params.pageCount) > payload.params.page &&  */}
-      <FetchMore loading={page !== 0 && loading} setPage={setPage} />
+    <div id={styles.container} className={page === 0 && loading ? "loading" : ""}>
+      <MainList list={list} />{console.log('page', page)}
+      <FetchMore loading={page !== 0 && loading} setPage={setPage}/>
     </div>
   );
 }

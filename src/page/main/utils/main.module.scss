@@ -8,14 +8,14 @@
 body {
     margin: 0;
   }
-  #app {
+  #container {
     position: relative;
     padding: 10px 10px 0;
   }
-  #app.loading {
+  #container.loading {
     height: 100vh;
   }
-  #app.loading:after {
+  #container.loading:after {
     content: "... 로딩중 ...";
     position: absolute;
     top: 50%;
@@ -32,7 +32,7 @@ body {
   
   #fetchMore {
     position: absolute;
-    bottom: 0;
+    bottom: 70px;
     left: 0;
     right: 0;
   }
@@ -49,13 +49,13 @@ body {
   #fetchMore.loading:after {
     content: "... 로딩중 ...";
   }
-  li {
-    display: flex;
-    flex-direction: row;
-    border-bottom: solid 1px #ccc;
-    font-size: 0.8em;
-    color: #999;
-  }
+  // li {
+  //   display: flex;
+  //   flex-direction: row;
+  //   border-bottom: solid 1px #ccc;
+  //   font-size: 0.8em;
+  //   color: #999;
+  // }
   .no {
     flex: 0 0 30px;
     padding: 10px 5px;

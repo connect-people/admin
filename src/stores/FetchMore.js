@@ -1,6 +1,7 @@
 import React, { useRef, useEffect } from "react";
+import styles from '../page/main/utils/Main.module.scss'
 
-const FetchMore = ({ loading, setPage }) => {
+const FetchMore = ({ loading, setPage, isLast }) => {
   const fetchMoreTrigger = useRef(null);
   const fetchMoreObserver = new IntersectionObserver(([{ isIntersecting }]) => {
     if(isIntersecting) setPage(page => page + 1);
@@ -14,7 +15,7 @@ const FetchMore = ({ loading, setPage }) => {
 
   return (
     <div
-      id="fetchMore"
+      id={styles.fetchMore}
       className={loading ? "loading" : ""}
       ref={fetchMoreTrigger}
     />
