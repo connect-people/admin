@@ -30,9 +30,11 @@ const MainContainer = () => {
       })
       return response.data.data;
     })
-   
-    if(Math.ceil(payload.params.totalCount / payload.params.pageCount) > payload.params.page){
+    if(page === 1){
       setList((prev) => [...prev, ...list]);
+    }
+    if(page !== 1 && Math.ceil(payload.params.totalCount / payload.params.pageCount) > payload.params.page){
+        setList((prev) => [...prev, ...list]);
     }
     
     setLoading(false);
