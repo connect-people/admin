@@ -1,13 +1,13 @@
 import React, { useState } from 'react';
-
+import SlickBasic from '../../components/molecules/slide/SlickBasic';
 const MainDescContainer = ({}) => {
 
 
 
     return(
-        <>
-        상세페이지
-        </>
+        <SlickBasic>
+        
+        </SlickBasic>
     );
 
 }

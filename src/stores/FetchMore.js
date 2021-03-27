@@ -8,9 +8,9 @@ const FetchMore = ({ loading, setPage }) => {
   });
   useEffect(() => {
     fetchMoreObserver.observe(fetchMoreTrigger.current);
-    return () => {
-      fetchMoreObserver.unobserve(fetchMoreTrigger.current);
-    };
+    // return () => {
+    //   fetchMoreObserver.unobserve(fetchMoreTrigger.current);
+    // };
   }, []);
 
   return (
