@@ -1,11 +1,11 @@
-import React from 'react';
+import React, {useState, useEffect} from 'react';
 import Slider from 'react-slick';
 import 'slick-carousel/slick/slick.css';
 import 'slick-carousel/slick/slick-theme.css';
 import styles from '../slide/Slick.module.scss';
 
 
-const SlickBasic = ({}) => {
+const SlickBasic = ({imageData}) => {
     const settings = {
         dots: true,
         infinite: true,
@@ -13,28 +13,22 @@ const SlickBasic = ({}) => {
         slidesToShow: 1,
         slidesToScroll: 1
     };
+    const [list, setList] = useState([]);
+    useEffect(() => {
+        setList(imageData)
+    }, [])
+    // const imageList = imageData;
 
-
+    // const itemList = imageList.map((item, index) => (
+    //     <div key={index}>
+    //         <img src={item} className={styles.img_thumb}/>
+    //     </div>
+    //     )
+    // );
+    
     return (
         <Slider {...settings}>
-            <div>
-                <img src="https://d1cyiajrf0e1fn.cloudfront.net/images/storage/board/20210324/a3b9a63b4e4d4037ca37c9b0f3be0f62.jpg" className={styles.img_thumb}/>
-            </div>
-            <div>
-                <img src="https://d1cyiajrf0e1fn.cloudfront.net/images/storage/board/20210324/a3b9a63b4e4d4037ca37c9b0f3be0f62.jpg" className={styles.img_thumb}/>
-            </div>
-            <div>
-                <img src="https://d1cyiajrf0e1fn.cloudfront.net/images/storage/board/20210324/a3b9a63b4e4d4037ca37c9b0f3be0f62.jpg" className={styles.img_thumb}/>
-            </div>
-            <div>
-                <img src="https://d1cyiajrf0e1fn.cloudfront.net/images/storage/board/20210324/a3b9a63b4e4d4037ca37c9b0f3be0f62.jpg" className={styles.img_thumb}/>
-            </div>
-            <div>
-                <img src="https://d1cyiajrf0e1fn.cloudfront.net/images/storage/board/20210324/a3b9a63b4e4d4037ca37c9b0f3be0f62.jpg" className={styles.img_thumb}/>
-            </div><div>
-                <img src="https://d1cyiajrf0e1fn.cloudfront.net/images/storage/board/20210324/a3b9a63b4e4d4037ca37c9b0f3be0f62.jpg" className={styles.img_thumb}/>
-            </div>
-            
+            {/* {itemList} */}
         </Slider>
     );
 }

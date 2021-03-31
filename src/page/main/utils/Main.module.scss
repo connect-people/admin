@@ -79,3 +79,39 @@
   }
 
 
+.cont_top{
+  margin-top: 20px;
+  padding: 19px 20px;
+  .txt_tit{
+    line-height: 18px;
+    font-size: 14px;
+    word-break: break-all;
+    vertical-align: middle;
+  }
+  .txt_date{
+    display: block;
+    margin-top: 6px;
+    font-size: 9px;
+    color: #7b8285;
+  }
+}
+.line_grey{
+  display: block;
+  width: 100%;
+  height: 1px;
+  background-color: #cfd2d4;
+}
+.cont_unit{
+  padding: 20px;
+  .view_cont{
+    line-height: 20px;
+    font-size: 12px;
+    word-break: break-all;
+  }
+  .txt_date{
+    display: block;
+    margin-top: 6px;
+    font-size: 9px;
+    color: #7b8285;
+  }
+}
