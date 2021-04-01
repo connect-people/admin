@@ -1,5 +1,17 @@
 @import 'src/styles/_utile.scss';
-
+.wrap_thumb{
+    display: block;
+    width: 100%;
+    // height: 100vw;
+}
 .img_thumb{
     width: 100%;
+    display: block;
+    position: relative;
+    padding-bottom: 100%;
+    // background-size: cover;
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+    background-color: #eee;
 }

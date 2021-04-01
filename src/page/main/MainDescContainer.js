@@ -34,7 +34,7 @@ const MainDescContainer = ({match}) => {
            }
         })
         .catch(err => alert("글을 가져오는데 실패 했습니다."))
-      }, [])
+    }, [])
     useEffect(() => {
         getData();
     },[getData])

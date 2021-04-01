@@ -1,4 +1,4 @@
-import React, {useState, useEffect} from 'react';
+import React, {useState} from 'react';
 import Slider from 'react-slick';
 import 'slick-carousel/slick/slick.css';
 import 'slick-carousel/slick/slick-theme.css';
@@ -14,21 +14,18 @@ const SlickBasic = ({imageData}) => {
         slidesToScroll: 1
     };
     const [list, setList] = useState([]);
-    useEffect(() => {
-        setList(imageData)
-    }, [])
-    // const imageList = imageData;
+    console.log('#####', imageData)
+    console.log('#####', list)
 
-    // const itemList = imageList.map((item, index) => (
-    //     <div key={index}>
-    //         <img src={item} className={styles.img_thumb}/>
-    //     </div>
-    //     )
-    // );
     
     return (
         <Slider {...settings}>
-            {/* {itemList} */}
+                {imageData && imageData.map((item, idx) => 
+                <div key={idx}>
+                     <div className={styles.wrap_thumb}>
+                        <span className={styles.img_thumb} style={{backgroundImage:`url(${item})`}}></span>
+                    </div>
+                </div>)}
         </Slider>
     );
 }
