@@ -1,12 +1,12 @@
 import React from 'react';
 import styles from './Main.module.scss';
 
-const Main = ({ children }) => {
+const Main = ({ children, className }) => {
 
 
 
     return(
-        <div className={styles.wrap_cp}>
+        <div className={`${styles.wrap_cp} ${className}`}>
             {children}
         </div>
     );

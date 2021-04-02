@@ -44,20 +44,20 @@ const NoticeDescContainer = ({match}) => {
  
     return(
         <div id="cpWrap" className={`${styles.wrap_cp} ${styles.wrap_notice}`}>
-            <Header title="공지사항 상세" btnOption={true} onClick={goBack}/>
-            <Main id="cpContent" className={`${styles.section_notice}`}>
-                <div className={`${styles.tit_unit}`}>
+            <Header title="서비스 공지사항" btnOption={true} onClick={goBack}/>
+            <div id="cpContent" className={`${styles.section_notice}`}>
+                <Main className={`${styles.tit_unit}`}>
                     <span className={`${styles.theme_info}`}>
                         <span className={`${styles.txt_tit}`}>{data.title}</span>
                         <span className={`${styles.txt_date}`}>{data.created}</span>
                     </span>
-                </div>
-                <div className={`${styles.cont_unit}`}>
+                </Main>
+                <Main className={`${styles.cont_unit}`}>
                     <span className={`${styles.theme_info}`}>
                         <span className={`${styles.view_cont}`}>{data.content}</span>
                     </span>
-                </div>
-            </Main>
+                </Main>
+            </div>
         </div>
     );
 
