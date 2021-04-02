@@ -1,0 +1,8 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="36" height="11" viewBox="0 0 36 11">
+    <g transform="translate(-96 -384)">
+        <rect width="36" height="11" fill="#e2af56" rx="5.5" transform="translate(96 384)"/>
+        <text fill="#fff" font-family="NanumSquareOTFB, NanumSquareOTF" font-size="7px" transform="translate(101 392)">
+            <tspan x="0" y="0">LIMITED</tspan>
+        </text>
+    </g>
+</svg>

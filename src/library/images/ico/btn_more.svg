@@ -1,0 +1,12 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="21" height="4.45" viewBox="0 0 21 4.45">
+    <defs>
+        <style>
+            .cls-1{fill:none;stroke:#000;stroke-linecap:round;stroke-linejoin:round}
+        </style>
+    </defs>
+    <g id="btn_more" transform="translate(.5 .5)">
+        <ellipse id="타원_7" cx="1.728" cy="1.725" class="cls-1" rx="1.728" ry="1.725"/>
+        <ellipse id="타원_8" cx="1.728" cy="1.725" class="cls-1" rx="1.728" ry="1.725" transform="translate(8.272)"/>
+        <ellipse id="타원_9" cx="1.728" cy="1.725" class="cls-1" rx="1.728" ry="1.725" transform="translate(16.544)"/>
+    </g>
+</svg>

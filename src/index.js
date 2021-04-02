@@ -3,13 +3,12 @@ import ReactDOM from 'react-dom';
 import './index.css';
 import App from './App';
 import reportWebVitals from './reportWebVitals';
-import { Provider } from 'mobx-react';
 import stores from './stores';
 
 ReactDOM.render(
-  <Provider {...stores}>
+  <div>
     <App />
-  </Provider>,
+  </div>,
   document.getElementById('root')
 );
 

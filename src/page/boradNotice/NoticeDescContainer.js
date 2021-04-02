@@ -44,7 +44,7 @@ const NoticeDescContainer = ({match}) => {
  
     return(
         <div id="cpWrap" className={`${styles.wrap_cp} ${styles.wrap_notice}`}>
-            <Header onClick={goBack}/>
+            <Header title="공지사항 상세" btnOption={true} onClick={goBack}/>
             <Main id="cpContent" className={`${styles.section_notice}`}>
                 <div className={`${styles.tit_unit}`}>
                     <span className={`${styles.theme_info}`}>

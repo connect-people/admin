@@ -6,7 +6,17 @@
     width: 100%;
     padding:19px 20px;
     border-bottom: solid 1px #cfd2d4;
-    &.notify{
+    // &.notify{
+    //     background-color: #eef2f4;
+    // }
+   
+    &:nth-child(1){
+        background-color: #eef2f4;
+    }
+    &:nth-child(2){
+        background-color: #eef2f4;
+    }
+    &:nth-child(3){
         background-color: #eef2f4;
     }
     .theme_info{
@@ -18,6 +28,7 @@
         display:table-cell;
         vertical-align: middle;
         text-align: right;
+        
     }
 }
 .theme_info{
@@ -47,4 +58,11 @@
 .theme_info {
     .cont_desc{
         width: 100%; overflow: hidden; text-overflow: ellipsis; white-space: normal; line-height: 16px; max-height: 33px; text-align: left; display: -webkit-box; -webkit-line-clamp: 2; -webkit-box-orient: vertical;word-break: break-all;}
+}
+
+.ico_arr_r{
+    width: 6px;
+    height: 12px;
+    background-size: 100%;
+    transform: rotate(180deg);
 }

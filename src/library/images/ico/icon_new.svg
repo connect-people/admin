@@ -1,0 +1,8 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="28" height="11" viewBox="0 0 28 11">
+    <g>
+        <path fill="#cd0000" d="M5.5 0h17a5.5 5.5 0 0 1 0 11h-17a5.5 5.5 0 0 1 0-11z"/>
+        <text fill="#fff" font-family="NanumSquareOTFB, NanumSquareOTF" font-size="7px" transform="translate(6 8)">
+            <tspan x="0" y="0">NEW</tspan>
+        </text>
+    </g>
+</svg>

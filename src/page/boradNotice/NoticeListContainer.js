@@ -41,7 +41,7 @@ const NoticeListContainer = () => {
                         <span className={`${styles.txt_date}`}>{item.created}</span>
                     </span>
                     <span className={`${styles.theme_arr}`}>
-                        <span className={`${styles.ico_snippet} ${styles.ico_arr_r}`}></span>
+                        <span className={`ico_snippet ico_arr_r ${styles.ico_arr_r}`}></span>
                     </span>
                 </Link>
             )
@@ -54,7 +54,7 @@ const NoticeListContainer = () => {
 
     return(
         <div id="cpWrap" className={`${styles.wrap_cp} ${styles.wrap_notice}`}>
-            <Header/>
+            <Header title="공지사항" btnOption={false}/>
             <main id="cpContent" className={`${styles.section_notice}`}>
                 {list ?
                     boardListContent()

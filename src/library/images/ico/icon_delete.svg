@@ -1,0 +1,22 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="10.429" height="12" viewBox="0 0 10.429 12">
+    <defs>
+        <clipPath id="clip-path">
+            <path id="사각형_16" fill="rgba(0,0,0,0)" stroke="#707070" d="M0 0H10.429V12H0z"/>
+        </clipPath>
+        <style>
+            .cls-3,.cls-4{fill:transparent;stroke:#000;stroke-linecap:round;stroke-linejoin:round}.cls-4{fill:none}
+        </style>
+    </defs>
+    <g id="icon_delete" transform="translate(-10 -9)">
+        <g id="Vector_Smart_Object" transform="translate(10 9)">
+            <g id="그룹_70" clip-path="url(#clip-path)">
+                <path id="패스_97" d="M11.544 9.218v6.639a1.794 1.794 0 0 1-1.789 1.789H5.134a1.794 1.794 0 0 1-1.789-1.789V9.218" class="cls-3" transform="translate(-2.23 -6.145)"/>
+                <path id="선_35" d="M0 0L9.429 0" class="cls-4" transform="translate(.5 2.763)"/>
+                <path id="패스_98" d="M12.286 3.453v-.834a1.119 1.119 0 0 1 2.238 0v.834" class="cls-3" transform="translate(-8.191 -1)"/>
+                <path id="선_36" d="M0 0L0 3.934" class="cls-4" transform="translate(3.403 5.04)"/>
+                <path id="선_37" d="M0 0L0 3.934" class="cls-4" transform="translate(5.215 5.04)"/>
+                <path id="선_38" d="M0 0L0 3.934" class="cls-4" transform="translate(7.026 5.04)"/>
+            </g>
+        </g>
+    </g>
+</svg>

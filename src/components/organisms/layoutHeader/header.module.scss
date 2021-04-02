@@ -13,9 +13,50 @@
         white-space: nowrap; 
         overflow: hidden; 
         text-overflow: ellipsis;
+        font-weight: 600;
         &.sub_page{
             display: block;
+            margin-left:0;
+        }
+    }
+
+    .show{
+        display: block !important;
+        & + .sub_page{
             margin-left: 25px;
         }
     }
+}
+.head_info{
+    background-color: #fff;
+    box-shadow: 0 1px 2px 0 #a0a0a03b;
+}
+
+.ico_snippet {
+    display: block;
+    overflow: hidden;
+    text-indent: -9999px;
+    vertical-align: middle;
+}
+.ico_arr_b {
+    width: 9.5px;
+    height: 19px;
+    background: url(../../../library/images/ico/icon_arrow.svg) no-repeat;
+}
+.link_back{
+    display: none;
+    position: absolute;
+    left: 0;
+    top: 0;
+    padding: 20px;
+}
+
+.head_sub .sub_title {
+    display: block;
+    line-height: 18px;
+    font-size: 16px;
+    width: 90%;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
 }
