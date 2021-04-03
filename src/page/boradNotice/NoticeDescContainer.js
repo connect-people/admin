@@ -21,6 +21,10 @@ const NoticeDescContainer = ({match}) => {
         history.goBack();
     };
 
+    const makeHtml = () => {
+        return {__html : data.content}
+    }
+
     const getData = useCallback(() => {
         let key = '80CFeBE4MD6JmhEfClBx7zqo1eGvwTl5EZgKyMQc'
         axios.get(`http://ec2-3-35-207-154.ap-northeast-2.compute.amazonaws.com/notice/${noticeCode}`, {
@@ -54,7 +58,7 @@ const NoticeDescContainer = ({match}) => {
                 </Main>
                 <Main className={`${styles.cont_unit}`}>
                     <span className={`${styles.theme_info}`}>
-                        <span className={`${styles.view_cont}`}>{data.content}</span>
+                        <span className={`${styles.view_cont}`} dangerouslySetInnerHTML={makeHtml()}/>
                     </span>
                 </Main>
             </div>
