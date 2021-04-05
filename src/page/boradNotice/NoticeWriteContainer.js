@@ -29,7 +29,7 @@ const NoticeWriteContainer = ({ history }) => {
             'Content-Type': 'application/json',
             'x-api-key': key
         }
-        axios.post('http://ec2-3-35-207-154.ap-northeast-2.compute.amazonaws.com/notice',        requestData, {headers: headers})
+        axios.post('https://bycf8blope.execute-api.ap-northeast-2.amazonaws.com/dev/v1/notice/',        requestData, {headers: headers})
         .then(function (response) {
             if(response){
                 if(response.status === 200){
