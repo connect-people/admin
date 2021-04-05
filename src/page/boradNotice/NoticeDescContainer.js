@@ -27,7 +27,7 @@ const NoticeDescContainer = ({match}) => {
 
     const getData = useCallback(() => {
         let key = '80CFeBE4MD6JmhEfClBx7zqo1eGvwTl5EZgKyMQc'
-        axios.get(`http://ec2-3-35-207-154.ap-northeast-2.compute.amazonaws.com/notice/${noticeCode}`, {
+        axios.get(`https://bycf8blope.execute-api.ap-northeast-2.amazonaws.com/dev/v1/notice/${noticeCode}`, {
           "x-api-key": key,
           })
           .then( response => {

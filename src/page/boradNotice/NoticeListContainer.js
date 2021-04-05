@@ -15,7 +15,7 @@ const NoticeListContainer = () => {
     
     const getData = () => {
         let key = '80CFeBE4MD6JmhEfClBx7zqo1eGvwTl5EZgKyMQc'
-        axios.get('http://ec2-3-35-207-154.ap-northeast-2.compute.amazonaws.com/notice/', {
+        axios.get('https://bycf8blope.execute-api.ap-northeast-2.amazonaws.com/dev/v1/notice/', {
           'x-api-key': key,
           params:{
           }
@@ -24,8 +24,8 @@ const NoticeListContainer = () => {
            if(response){
              const { data } = response.data
              if(response.status === 200){
-                 console.log('TEST',data)
-                 const resData = response.data.data
+                 console.log('RESPONSE',response.data.items)
+                 const resData = response.data.items
                  setList(resData)
              }
            }
